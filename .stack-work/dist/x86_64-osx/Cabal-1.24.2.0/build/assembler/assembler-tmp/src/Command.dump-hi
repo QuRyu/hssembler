@@ -1,0 +1,246 @@
+
+==================== FINAL INTERFACE ====================
+2017-10-24 20:02:16.689305 UTC
+
+interface main@main:Command 8002
+  interface hash: 44dc00e01ca18a74215c49b48acb63dc
+  ABI hash: ec6d35231975fb359199b85e5819035a
+  export-list hash: d5de60b8846c7943b075c528135c7872
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 0a238b68af03e874cfe688f290eaeddb
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Command.command
+  Command.converter
+  Command.Command
+module dependencies:
+package dependencies: base-4.9.1.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.1.0:GHC.Base base-4.9.1.0:GHC.Float
+family instance modules: base-4.9.1.0:Control.Applicative
+                         base-4.9.1.0:Data.Either base-4.9.1.0:Data.Functor.Const
+                         base-4.9.1.0:Data.Monoid base-4.9.1.0:Data.Type.Equality
+                         base-4.9.1.0:GHC.Generics base-4.9.1.0:GHC.IO.Exception
+                         base-4.9.1.0:GHC.TypeLits
+import  -/  base-4.9.1.0:Data.Char 01433d23661edb6e5ef1536ef1e6774c
+import  -/  base-4.9.1.0:Data.Either 20b09ef8d0a5b74fdec011c40c1587f5
+import  -/  base-4.9.1.0:Data.Foldable 3e0b6967a1da89945d0e2d47266337a2
+import  -/  base-4.9.1.0:Data.Maybe d876c4ffe4b3c43755a781e8ad860d88
+import  -/  base-4.9.1.0:Data.OldList 27987919d8da2f92e3f472ca81f730f8
+import  -/  base-4.9.1.0:Data.Tuple 7dc4bbb45d2e69c991ffac438beeca11
+import  -/  base-4.9.1.0:GHC.Base c4231c43c07e46080a26bf94094c7aa1
+import  -/  base-4.9.1.0:GHC.List ab8c4e523e6c479c549d3bcd5fc4a439
+import  -/  base-4.9.1.0:GHC.Show a027f5ac24879eaba752f44aa90fe511
+import  -/  base-4.9.1.0:GHC.Unicode a175ecf20bf1272d9ae31337e7da43ab
+import  -/  base-4.9.1.0:Prelude 22dd289b8469a8fa8dc81cab7b237771
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+1f34404df6e25df9ee9469de16d2169f
+  $fEqCommand :: GHC.Classes.Eq Command.Command
+  DFunId
+  {- HasNoCafRefs, Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Command.Command
+                  Command.$fEqCommand_$c==
+                  Command.$fEqCommand_$c/= -}
+1f34404df6e25df9ee9469de16d2169f
+  $fEqCommand_$c/= ::
+    Command.Command -> Command.Command -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ (a :: Command.Command) (b :: Command.Command) ->
+                 case Command.$fEqCommand_$c== a b of wild {
+                   GHC.Types.False -> GHC.Types.True
+                   GHC.Types.True -> GHC.Types.False }) -}
+1f34404df6e25df9ee9469de16d2169f
+  $fEqCommand_$c== ::
+    Command.Command -> Command.Command -> GHC.Types.Bool
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U>,
+     Unfolding: (\ (ds :: Command.Command) (ds1 :: Command.Command) ->
+                 case ds of wild {
+                   Command.Move a1 a2 a3
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Command.Move b1 b2 b3
+                        -> case GHC.Base.eqString a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Base.eqString a2 b2 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True -> GHC.Base.eqString a3 b3 } } }
+                   Command.Arith a1 a2 a3 a4
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Command.Arith b1 b2 b3 b4
+                        -> case GHC.Base.eqString a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True
+                             -> case GHC.Base.eqString a2 b2 of wild3 {
+                                  GHC.Types.False -> GHC.Types.False
+                                  GHC.Types.True
+                                  -> case GHC.Base.eqString a3 b3 of wild4 {
+                                       GHC.Types.False -> GHC.Types.False
+                                       GHC.Types.True -> GHC.Base.eqString a4 b4 } } } }
+                   Command.Jump a1
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Command.Jump b1 -> GHC.Base.eqString a1 b1 }
+                   Command.Branch a1 a2
+                   -> case ds1 of wild1 {
+                        DEFAULT -> GHC.Types.False
+                        Command.Branch b1 b2
+                        -> case GHC.Base.eqString a1 b1 of wild2 {
+                             GHC.Types.False -> GHC.Types.False
+                             GHC.Types.True -> GHC.Base.eqString a2 b2 } } }) -}
+1f34404df6e25df9ee9469de16d2169f
+  $fShowCommand :: GHC.Show.Show Command.Command
+  DFunId
+  {- Strictness: m, Inline: [ALWAYS] CONLIKE,
+     Unfolding: DFun:.
+                  @ Command.Command
+                  Command.$fShowCommand_$cshowsPrec
+                  Command.$fShowCommand_$cshow
+                  Command.$fShowCommand_$cshowList -}
+1f34404df6e25df9ee9469de16d2169f
+  $fShowCommand1 :: Command.Command -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (\ (w :: Command.Command) (w1 :: GHC.Base.String) ->
+                 Command.$w$cshowsPrec 0# w w1) -}
+1f34404df6e25df9ee9469de16d2169f
+  $fShowCommand_$cshow :: Command.Command -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U>,
+     Unfolding: InlineRule (1, True, False)
+                (\ (x :: Command.Command) ->
+                 Command.$fShowCommand_$cshowsPrec
+                   GHC.Show.shows22
+                   x
+                   (GHC.Types.[] @ GHC.Types.Char)) -}
+1f34404df6e25df9ee9469de16d2169f
+  $fShowCommand_$cshowList :: [Command.Command] -> GHC.Show.ShowS
+  {- Arity: 2,
+     Unfolding: (GHC.Show.showList__
+                   @ Command.Command
+                   Command.$fShowCommand1) -}
+1f34404df6e25df9ee9469de16d2169f
+  $fShowCommand_$cshowsPrec ::
+    GHC.Types.Int -> Command.Command -> GHC.Show.ShowS
+  {- Arity: 3, Strictness: <S(S),1*U(U)><S,1*U><L,U>,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (3, True, False)
+                (\ (w :: GHC.Types.Int)
+                   (w1 :: Command.Command)
+                   (w2 :: GHC.Base.String) ->
+                 case w of ww { GHC.Types.I# ww1 ->
+                 Command.$w$cshowsPrec ww1 w1 w2 }) -}
+0382e137a88607da278eb56e22d01cf4
+  $tc'Arith :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   15905392595271285418##
+                   18345945476911239576##
+                   Command.$trModule
+                   Command.$tc'Arith1) -}
+7fdf46541d5a3815a1d32952786bf1fb
+  $tc'Arith1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Arith"#) -}
+b36b0dd3a501e70025dffa28d4346115
+  $tc'Branch :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   7101872872582024898##
+                   1857742245298319381##
+                   Command.$trModule
+                   Command.$tc'Branch1) -}
+976985b18446e7111e4c84c868c4745b
+  $tc'Branch1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Branch"#) -}
+5acfb0ec6c5715042507934c694717c9
+  $tc'Jump :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   13640391582579261120##
+                   14264084310695630651##
+                   Command.$trModule
+                   Command.$tc'Jump1) -}
+1e2aca2cdda0b219088a709ce75245a8
+  $tc'Jump1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Jump"#) -}
+05bc0c9fba69c9ab54b1fead617aedc6
+  $tc'Move :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6529806515476264348##
+                   2533357178885790569##
+                   Command.$trModule
+                   Command.$tc'Move1) -}
+c58c350c7329e5fe40bbc46c3a1447bc
+  $tc'Move1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "'Move"#) -}
+46eddb079c8234ef22a0ace66915290e
+  $tcCommand :: GHC.Types.TyCon
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.TyCon
+                   6073037425546178572##
+                   3236502627168532764##
+                   Command.$trModule
+                   Command.$trModule1) -}
+1af653b94aa06564a2cd85ac6fe64fbb
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module
+                   Command.$trModule2
+                   Command.$trModule1) -}
+1e2b99252bb8f6ef5ac6bb6a31fb4129
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Command"#) -}
+cb24630ac8e695647166a090c319d66d
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "main"#) -}
+1f34404df6e25df9ee9469de16d2169f
+  $w$cshowsPrec ::
+    GHC.Prim.Int#
+    -> Command.Command -> GHC.Base.String -> GHC.Base.String
+  {- Arity: 3, Strictness: <S,U><S,1*U><L,U>, Inline: [0] -}
+cefff18dd62cfc41364836f589f276f4
+  type Addr = GHC.Base.String
+1f34404df6e25df9ee9469de16d2169f
+  data Command
+    = Move Command.Src Command.Dst Command.Val
+    | Arith Command.Op Command.Src Command.Dst Command.Val
+    | Jump Command.Addr
+    | Branch Command.Src Command.Addr
+48f9f1472b20d5537be0d3aa89a428b8
+  type Dst = GHC.Base.String
+f6685909b7704aad5921feabd52640b7
+  type Op = GHC.Base.String
+fc6a2c592da41b6077a79830448498eb
+  type Src = GHC.Base.String
+d79c6cc6d223d44b50e07cfa4cca7bce
+  type Val = GHC.Base.String
+93f79e9e855175e7a5833badeaf36ded
+  command ::
+    [GHC.Base.String]
+    -> Data.Either.Either GHC.Base.String Command.Command
+  {- Arity: 1, Strictness: <S,1*U> -}
+13b26d4cf56ce78e26637906ffeaa6d4
+  converter :: Command.Command -> GHC.Base.String
+  {- Arity: 1, Strictness: <S,1*U> -}
+instance [safe] GHC.Classes.Eq [Command.Command]
+  = Command.$fEqCommand
+instance [safe] GHC.Show.Show [Command.Command]
+  = Command.$fShowCommand
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
